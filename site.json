@@ -1,0 +1,15 @@
+{
+  "title": "CAD 실무 자동화 노트",
+  "description": "기계 설계자가 직접 쓰는 CAD 실무 팁과 엑셀·파이썬·LISP 업무 자동화 노트",
+  "base_url": "https://cad-auto-note.pages.dev",
+  "author": "CAD 실무 자동화 노트",
+  "lang": "ko",
+  "categories": {
+    "cad": "CAD 실무",
+    "sheetmetal": "판금 설계",
+    "excel": "엑셀 자동화",
+    "python": "파이썬 자동화",
+    "lisp": "LISP·매크로"
+  },
+  "adsense_client": ""
+}

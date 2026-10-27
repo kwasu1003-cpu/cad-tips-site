@@ -1,0 +1,30 @@
+:root{--bg:#fbfbfa;--fg:#1d1f22;--muted:#5f6670;--line:#e3e4e6;--accent:#1f5fbf;--code:#f1f2f4}
+@media (prefers-color-scheme:dark){:root{--bg:#16181b;--fg:#e6e7e9;--muted:#9aa1ab;--line:#2c3036;--accent:#7fb0ff;--code:#22262b}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.75 "Pretendard","Malgun Gothic","Apple SD Gothic Neo",sans-serif;word-break:keep-all}
+a{color:var(--accent)}
+header.site,footer.site,main{max-width:760px;margin:0 auto;padding:0 16px}
+header.site{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;padding-top:18px;padding-bottom:14px;border-bottom:1px solid var(--line)}
+.brand{font-weight:700;font-size:1.1rem;color:var(--fg);text-decoration:none}
+header nav{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:.92rem}
+header nav a{color:var(--muted);text-decoration:none}
+main{padding-top:24px;padding-bottom:48px}
+h1{font-size:1.75rem;line-height:1.35;margin:.2em 0 .4em}
+h2{font-size:1.3rem;margin-top:2em}
+h3{font-size:1.1rem}
+.hero{font-size:1.9rem}.lead,.meta,.crumb,small{color:var(--muted)}
+.meta,.crumb{font-size:.9rem;margin:0}
+.cards{list-style:none;padding:0}
+.card{padding:16px 0;border-bottom:1px solid var(--line)}
+.card h2{margin:0 0 4px;font-size:1.2rem}.card a{text-decoration:none}.card p{margin:0 0 4px}
+table{border-collapse:collapse;width:100%;display:block;overflow-x:auto;font-size:.95rem}
+th,td{border:1px solid var(--line);padding:6px 10px;text-align:left}
+th{background:var(--code)}
+code{background:var(--code);padding:1px 5px;border-radius:4px;font-size:.9em}
+pre{background:var(--code);padding:14px;border-radius:6px;overflow-x:auto;line-height:1.5}
+pre code{padding:0;background:none}
+.toc{border:1px solid var(--line);border-radius:6px;padding:8px 16px;margin:16px 0;font-size:.95rem}
+.toc ul{margin:4px 0;padding-left:20px}
+.tag{color:var(--muted);font-size:.9rem;margin-right:6px}
+.related{border-top:2px solid var(--line);margin-top:32px}
+footer.site{border-top:1px solid var(--line);color:var(--muted);font-size:.85rem;padding-bottom:32px}
