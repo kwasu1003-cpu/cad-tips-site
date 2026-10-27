@@ -54,6 +54,8 @@ def page(title, desc, path, body, jsonld=None, og_type="website"):
     if SITE.get("adsense_client"):
         ads = (f'<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={SITE["adsense_client"]}" '
                'crossorigin="anonymous"></script>')
+    verify = "".join(f'<meta name="{n}" content="{esc(SITE[k])}">' for k, n in
+                     (("google_verification", "google-site-verification"), ("naver_verification", "naver-site-verification")) if SITE.get(k))
     nav = "".join(f'<a href="/category/{k}/">{esc(v)}</a>' for k, v in SITE["categories"].items())
     return f"""<!doctype html>
 <html lang="{SITE['lang']}">
@@ -71,7 +73,7 @@ def page(title, desc, path, body, jsonld=None, og_type="website"):
 <meta property="og:locale" content="ko_KR">
 <link rel="alternate" type="application/rss+xml" title="{esc(SITE['title'])}" href="/feed.xml">
 <link rel="stylesheet" href="/style.css">
-{ld}{ads}
+{verify}{ld}{ads}
 </head>
 <body>
 <header class="site"><a class="brand" href="/">{esc(SITE['title'])}</a><nav>{nav}</nav></header>
