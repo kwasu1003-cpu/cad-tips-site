@@ -35,6 +35,8 @@
 ## 5. 프로젝트별 정보
 
 - 위치: `F:\Projects\cad-tips-site`
+- 사이트 주소: https://cad-tips-site.kwasu1003.workers.dev (`site.json`의 `base_url`)
+- 처음 push할 때 앱 환경에서는 git 로그인 창이 막혀서, 별도 cmd 창에서 로그인했다.
 - 주제: CAD 실무·판금 설계·엑셀/파이썬/LISP 업무 자동화 팁
 - 수익: Google AdSense (비용 0원 운영, 애드센스 신청 시 개인 도메인 필요)
 - 발행: 하루 1편, 사용자가 검토·승인한 뒤에만 발행
@@ -48,7 +50,7 @@
 | `build.py` | 사이트 생성 → `public/` |
 | `check.py` | 점검(머리말·깨진 링크, `--live`로 실제 사이트) → `reports/날짜.md` |
 | `운영절차.md` | 매일 발행·점검 절차 |
-| `deploy.ps1` | 점검 → 커밋 → `git push origin main` (사용자 확인 후에만 실행). Cloudflare Pages가 push를 받아 `python build.py`로 빌드, 출력 폴더 `public` |
+| `deploy.ps1` | 점검 → 커밋 → `git push origin main` (사용자 확인 후에만 실행). Cloudflare(Workers, GitHub `kwasu1003-cpu/cad-tips-site` 연결)가 push를 받아 `python build.py`로 빌드, 출력 폴더 `public`. 실행: `powershell -ExecutionPolicy Bypass -File deploy.ps1 "메시지"` |
 | `requirements.txt` | Cloudflare 빌드용 파이썬 패키지 |
 
 검증 명령:
