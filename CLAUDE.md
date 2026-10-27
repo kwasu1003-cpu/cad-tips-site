@@ -51,6 +51,7 @@
 | `check.py` | 점검(머리말·깨진 링크, `--live`로 실제 사이트) → `reports/날짜.md` |
 | `운영절차.md` | 매일 발행·점검 절차 |
 | `deploy.ps1` | 점검 → 커밋 → `git push origin main` (사용자 확인 후에만 실행). Cloudflare(Workers, GitHub `kwasu1003-cpu/cad-tips-site` 연결)가 push를 받아 `python build.py`로 빌드, 출력 폴더 `public`. 실행: `powershell -ExecutionPolicy Bypass -File deploy.ps1 "메시지"` |
+| `.claude/skills/humanize-korean/` | 한국어 AI 티 윤문 스킬 (im-not-ai v2.3.2, MIT, 복사 설치. 원본 저장소 `F:\Tools\im-not-ai`). 런타임 에이전트는 `.claude/agents/humanize-*.md`. 작업 폴더 `_workspace/`는 git 제외 |
 | `requirements.txt` | Cloudflare 빌드용 파이썬 패키지 |
 
 검증 명령:
